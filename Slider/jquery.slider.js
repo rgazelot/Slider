@@ -36,11 +36,12 @@
 				$('#slider_container').append('<img src="'+opts.imgs[i]+'" height="" widht=""/>');
 			}
 			
-			/* List and buttons */
+			/* List */
 			$this.append('<ul></ul><a id="slider_next" href="next"></a><a id="slider_previous" href="previous"></a>');
 			$('#slider_next').css({top:top+'px'});		
 			$('#slider_previous').css({top:top+'px'});
 			var $ul = $this.children('ul');
+			
 			for(i=0;i<nb_img;i++){
 				if(i==0){
 					$ul.append('<li nb="'+(i+1)+'" class="enable"></li>');
@@ -48,6 +49,7 @@
 					$ul.append('<li nb="'+(i+1)+'" class="disable"></li>');
 				}
 			}
+			
 			$ul.css({left:left+'px'});
 
 		/* 
@@ -85,28 +87,37 @@
 		/* 
 		 * Slider behavior 
 		 */
+		 	/* Mouseover Slider */
 			$this.on('mouseover',function(){
 				$('#slider_next').stop().animate({right:'8px'},opts.speedDisplay);
 				$('#slider_previous').stop().animate({left:'8px'},opts.speedDisplay);
 				$ul.stop().animate({bottom:'15px'},opts.speedDisplay);
 			});
+			
+			/* Mouseout Slider */
 			$this.on('mouseout',function(){
 				$('#slider_next').stop().animate({right:'-35px'},opts.speedDisplay);
 				$('#slider_previous').stop().animate({left:'-35px'},opts.speedDisplay);
 				$ul.stop().animate({bottom:'-20px'},opts.speedDisplay);
 			});
+			
+			/* Click Next */
 			$('#slider_next').on('click',function(){
 				clearInterval(t);
 				Next();
 				Animate();
 				return false;
 			});
+			
+			/* Click Previous */
 			$('#slider_previous').on('click',function(){
 				clearInterval(t);
 				Previous();
 				Animate();
 				return false;
 			});
+			
+			/* Click list */
 			$ul.children('li').on('click',function(){
 				clearInterval(t);
 				nb = $(this).attr('nb');
