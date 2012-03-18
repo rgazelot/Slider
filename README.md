@@ -41,12 +41,12 @@ And call the slider plugin with your table like that :
 
 You can pass options to your plugin :
 
-Enable the loader : `.slider({imgs:data, loader:true })`.
-Define the color of the loader : `.slider({imgs:data, colorLoader:'#fff'})`.
-Enable the frame  : `.slider({imgs:data, frame:true })`.
-The speed display of the elements : `.slider({imgs:data, speedDisplay:300})`, in miliseconds.
-The speed of the animation : `.slider({imgs:data, speedAnimation:5000})`, in miliseconds.
-Enable the arrows on the sides : `.slider({imgs:data, arrows:true})`.
+* Enable the loader : `.slider({imgs:data, loader:true })`.
+* Define the color of the loader : `.slider({imgs:data, colorLoader:'#fff'})`.
+* Enable the frame  : `.slider({imgs:data, frame:true })`.
+* The speed display of the elements : `.slider({imgs:data, speedDisplay:300})`, in miliseconds.
+* The speed of the animation : `.slider({imgs:data, speedAnimation:5000})`, in miliseconds.
+* Enable the arrows on the sides : `.slider({imgs:data, arrows:true})`.
 
 
 
