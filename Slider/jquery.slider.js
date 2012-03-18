@@ -8,7 +8,7 @@
 			speedAnimation: 5000,
 			arrows : true,
 			frame : false,
-			loader : true,
+			loader : false,
 			colorLoader : '#eee',
 		};
 		
