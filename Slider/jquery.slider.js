@@ -114,7 +114,9 @@
 			function Previous(){
 				$ul.children('li:nth-child('+(token+1)+')').removeClass('slider_enable').addClass('slider_disable');
 				token--;
-				if(token == -1){token = 2;}
+				console.log(token);
+				if(token == -1){token = (nb_img-1);}
+				console.log(token);
 				$('#slider_container').animate({left:'-'+(width*token)+'px'});
 				$ul.children('li:nth-child('+(token+1)+')').removeClass('slider_disable').addClass('slider_enable');
 				if(opts.loader === true){
