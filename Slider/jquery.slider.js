@@ -1,3 +1,8 @@
+/*
+JQuery Slider
+Author : Rémy GAZELOT @rgazelot
+*/
+
 (function($) {
 	$.fn.slider = function(args) {
 		var $this = $(this);
