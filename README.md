@@ -48,6 +48,11 @@ You can pass options to your plugin :
 * The speed of the animation : `.slider({imgs:data, speedAnimation:5000})`, in miliseconds.
 * Enable the arrows on the sides : `.slider({imgs:data, arrows:true})`.
 
+#### Example
+
+You can see a simple example of usage in the folder `example`.
+
+#### Enjoy !
 
 
 
