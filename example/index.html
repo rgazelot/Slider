@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Example Slider JQuery</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<script type="text/javascript" src="js/libs/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/libs/slider/jquery.slider.js"></script>
+	
+	<!-- The theme of your slider -->
+	<link rel="stylesheet" href="js/libs/slider/themes/defaults/style.css" type="text/css" media="screen">
+	
+	<!-- Your Style -->
+	<style type="text/css">
+		#slider {
+			height:300px;
+			width:600px;
+		}
+	</style>
+	
+	<!-- Your Javascript -->
+	<script type="text/javascript">
+		$(function(){
+			
+			/* Build a table with the repositories of your images  */
+			var data = [
+				'img/img1.png',
+				'img/img2.png',
+				'img/img3.png',
+				'img/img4.png',
+			];
+			
+			/* Call the slider plugin with your table */
+			$('#slider').slider({imgs:data});
+			
+		});
+	</script>
+	
+</head>
+<body>
+	
+	<div id="slider"></div>
+	
+</body>
+</html>
