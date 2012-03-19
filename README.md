@@ -52,6 +52,11 @@ You can pass options to your plugin :
 
 You can see a simple example of usage in the folder `example`.
 
+#### List of themes
+
+* Defaults
+* Grey
+
 #### Enjoy !
 
 

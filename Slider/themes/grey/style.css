@@ -1,0 +1,14 @@
+#slider						{overflow:hidden; position:relative; z-index:1;}
+#slider img					{border:0; float:left; margin:0; padding:0; z-index:1;}
+#slider ul					{bottom:-20px; margin:0; padding:0; position:absolute; z-index:3;}		
+#slider ul li				{float:left; height:18px; list-style:none; margin:0 4px 0 4px; width:18px;}
+#slider_container			{left:0px; position:absolute; top:0px;}
+#slider_next				{background:url('grey.png') no-repeat top left; background-position:-48px -19px; display:block; height:46px; position:absolute; width:46px; z-index:3;}
+#slider_next:hover			{background:url('grey.png') no-repeat top left; background-position:-49px -68px;}
+#slider_previous			{background:url('grey.png') no-repeat top left; background-position:0px -19px; display:block; height:46px; position:absolute; top:43%; width:46px; z-index:3;}
+#slider_previous:hover		{background:url('grey.png') no-repeat top left; background-position:0px -68px;}
+#slider_frame				{background:url('../frame.png') repeat top left; height:100%; left:0; position:absolute; top:0; width:100%; z-index:2}
+#slider_container_loader	{height:3px; left:0; position:absolute; top:0; width:100%; z-index:3}
+#slider_loader				{height:3px; width:0%;}
+.slider_disable				{background:url('grey.png') no-repeat top left; background-position:-1px 0px; cursor:pointer;}
+.slider_enable				{background:url('grey.png') no-repeat top left; background-position:-20px 0px; cursor:pointer;}
