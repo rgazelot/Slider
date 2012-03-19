@@ -25,9 +25,8 @@
 			    width  = $this.css('width');
 			height = height.substr(0,(height.length-2));
 			width = width.substr(0,(width.length-2));
-			var top = ((height*50)/100)-17,
-			    left = ((width*50)/100)-(nb_img*26)/2;
-		
+			var left = ((width*50)/100)-(nb_img*26)/2;
+			
 		/* 
 		 * Creating elements 
 		 */
@@ -43,8 +42,13 @@
 			/* Buttons */
 			if(opts.arrows === true){
 				$this.append('<a id="slider_next" href="next"></a><a id="slider_previous" href="previous"></a>');
-				$('#slider_next').css({top:top+'px'});		
-				$('#slider_previous').css({top:top+'px'});
+				var buttonHeight = $('#slider_next').css('height'),
+					buttonWidth  = $('#slider_next').css('width');
+				buttonHeight = (buttonHeight.substr(0,(buttonHeight.length-2)))/2;
+				buttonWidth = Math.ceil(buttonWidth.substr(0,(buttonWidth.length-2)));
+				var top = ((height*50)/100)-buttonHeight;
+			   	$('#slider_next').css({top:top+'px',right:'-'+(buttonWidth+4)+'px'});		
+				$('#slider_previous').css({top:top+'px',left:'-'+(buttonWidth+4)+'px'});
 			}
 			
 			/* List */
@@ -137,8 +141,8 @@
 			
 			/* Mouseout Slider */
 			$this.on('mouseout',function(){
-				$('#slider_next').stop().animate({right:'-35px'},opts.speedDisplay);
-				$('#slider_previous').stop().animate({left:'-35px'},opts.speedDisplay);
+				$('#slider_next').stop().animate({right:'-'+(buttonWidth+4)+'px'},opts.speedDisplay);
+				$('#slider_previous').stop().animate({left:'-'+(buttonWidth+4)+'px'},opts.speedDisplay);
 				$ul.stop().animate({bottom:'-20px'},opts.speedDisplay);
 			});
 			
